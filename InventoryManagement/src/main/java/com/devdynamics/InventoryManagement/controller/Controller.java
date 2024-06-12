@@ -18,7 +18,7 @@ import com.devdynamics.InventoryManagement.model.Product;
 @RequestMapping("/assignment")
 public class Controller {
 	@Autowired
-	private InventoryService service;//injecting service class
+	private InventoryService service;
 	
 	@PostMapping("/add/{product_id}/{quantity}/{price}")
 	public String addItem(@PathVariable String product_id,@PathVariable int quantity,@PathVariable int price)
