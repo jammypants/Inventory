@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "6931c90d-5a06-410f-8080-e8341dc81430",
+		"name": "DevDynamics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29438380"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/assignment/allitems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment/add/milk/100/50",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"add",
+						"milk",
+						"100",
+						"50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/assignment/allitems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment/remove/milk/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"remove",
+						"milk",
+						"6"
+					]
+				},
+				"description": "Added item to inventory"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/assignment/remove/milk/6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment/remove/milk/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"remove",
+						"milk",
+						"6"
+					]
+				},
+				"description": "removed certain quantity"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/assignment/allitems",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment/allitems",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"allitems"
+					]
+				},
+				"description": "displaying items"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/assignment/addcart/1001/milk/6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/assignment/addcart/1001/milk/6",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"assignment",
+						"addcart",
+						"1001",
+						"milk",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
