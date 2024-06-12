@@ -1,0 +1,37 @@
+package com.devdynamics.InventoryManagement.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.devdynamics.InventoryManagement.Service.InventoryService;
+import com.devdynamics.InventoryManagement.model.Product;
+
+@RestController
+@RequestMapping("/assignment")
+public class Controller {
+	@Autowired
+	private InventoryService service;//injecting service class
+	
+	@PostMapping("/add")
+	public String addItem(@RequestBody Product prod)
+	{
+		return service.addItem(prod);
+	}
+	@GetMapping("/allitems")
+	public List<Product> getAll()
+	{
+		return service.allitems();
+	}
+	@GetMapping("/remove/{product_id}/{quantity}")
+	public String remove(@PathVariable String product_id,@PathVariable int quantity)
+	{
+		return service.remove(product_id,quantity);
+	}
+}

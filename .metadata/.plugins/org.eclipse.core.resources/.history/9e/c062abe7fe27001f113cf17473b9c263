@@ -1,0 +1,37 @@
+package com.devdynamics.InventoryManagement.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.devdynamics.InventoryManagement.model.Product;
+
+import java.util.*;
+
+@Service
+public class InventoryService {
+	final List<Product> inventory = new ArrayList<>();
+	public String addItem(Product prod)
+	{
+		inventory.add(prod);
+		return "Item added";
+	}
+	public List<Product> allitems()
+	{
+		return inventory;
+	}
+	public String remove(String product_id,int quantity)
+	{
+		for(Product prod : inventory)
+		{
+			if(prod.getProduct_id().equalsIgnoreCase(product_id))
+			{
+				Product p1 = prod;
+				int quant = p1.getQuantity()-1;
+				p1.setQuantity(quant);
+				inventory.remove(prod);
+				inventory.add(p1);
+				return "Item successfully removed";
+			}
+		}
+		return "Item not present in Inventory";
+	}
+}

@@ -1,0 +1,22 @@
+package com.devdynamics.InventoryManagement.Service;
+
+import org.springframework.stereotype.Service;
+
+import com.devdynamics.InventoryManagement.model.Product;
+
+import java.util.*;
+
+@Service
+public class InventoryService {
+	List<Product> inventory = new ArrayList<>();
+	
+	public String addItem(Product prod)
+	{
+		inventory.add(prod);
+		return "Item added";
+	}
+	public List<Product> allitems()
+	{
+		return inventory;
+	}
+}

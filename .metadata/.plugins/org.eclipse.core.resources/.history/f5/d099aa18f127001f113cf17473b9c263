@@ -1,0 +1,5 @@
+package com.devdynamics.InventoryManagement.Service;
+
+public class InventoryService {
+
+}
